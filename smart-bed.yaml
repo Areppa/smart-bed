@@ -1,0 +1,65 @@
+substitutions:
+  device_name: smart-bed
+  friendly_name: Smart Bed
+  location: My Room
+
+esphome:
+  name: "${device_name}"
+  friendly_name: "${friendly_name}"
+
+esp32:
+  board: nodemcu-32s
+  framework:
+    type: arduino
+
+# Include the base device configuration
+<<: !include .device_base.yaml
+
+# Output Config
+output:
+  - platform: gpio
+    pin: GPIO23
+    id: wifi_status_led
+  - platform: gpio
+    pin: GPIO32
+    id: relay_head_up_pin
+  - platform: gpio
+    pin: GPIO33
+    id: relay_head_down_pin
+  - platform: gpio
+    pin: GPIO25
+    id: relay_legs_up_pin
+  - platform: gpio
+    pin: GPIO26
+    id: relay_legs_down_pin
+
+# Define the switches based on the relay pins
+switch:
+  - platform: output
+    id: head_up
+    name: "Head Up"
+    output: relay_head_up_pin
+  - platform: output
+    id: head_down
+    name: "Head Down"
+    output: relay_head_down_pin
+  - platform: output
+    id: legs_up
+    name: "Legs Up"
+    output: relay_legs_up_pin
+  - platform: output
+    id: legs_down
+    name: "Legs Down"
+    output: relay_legs_down_pin
+
+# Check the wifi status and turn on/off the wifi status LED
+interval:
+  - interval: 1s
+    then:
+      if:
+        condition:
+          wifi.connected:
+        then:
+          - output.turn_on: wifi_status_led
+        else:
+          - output.turn_off: wifi_status_led
