@@ -25,7 +25,7 @@ For the power I used old phone charger that I had laying around. This is easy wa
 - Power supply (I used old phone charger for this)
 - Some cable to connect everything together
 - Connectors that go between your bed controller and bed
-  - This is is optional but recommended if you want to keep the original controller. Otherwise you need to cut the remote cable and use it's connector.
+  - This is optional but recommended if you want to keep the original controller. Otherwise you need to cut the remote cable and use it's connector.
 - USB to TTL converter
   - This is only required if your controller doesn't have USB port
 
