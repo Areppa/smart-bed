@@ -59,18 +59,22 @@ switch:
     id: head_up
     name: "Head Up"
     output: relay_head_up
+    internal: true
   - platform: output
     id: head_down
     name: "Head Down"
     output: relay_head_down
+    internal: true
   - platform: output
     id: legs_up
     name: "Legs Up"
     output: relay_legs_up
+    internal: true
   - platform: output
     id: legs_down
     name: "Legs Down"
     output: relay_legs_down
+    internal: true
 
 # Check the wifi status and turn on/off the wifi status LED
 interval:
