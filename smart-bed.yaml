@@ -40,35 +40,37 @@ output:
     id: wifi_status_led
   - platform: gpio
     pin: GPIO32
-    id: relay_head_up_pin
+    id: relay_head_up
   - platform: gpio
     pin: GPIO33
-    id: relay_head_down_pin
+    id: relay_head_down
   - platform: gpio
     pin: GPIO25
-    id: relay_legs_up_pin
+    id: relay_legs_up
   - platform: gpio
     pin: GPIO26
-    id: relay_legs_down_pin
+    id: relay_legs_down
 
-# Define the switches based on the relay pins
+
+# These switches can be used to troubleshoot if the covers are not working correctly
+# Switches are also configured to be internal only so they are not exposed to Home Assistant
 switch:
   - platform: output
     id: head_up
     name: "Head Up"
-    output: relay_head_up_pin
+    output: relay_head_up
   - platform: output
     id: head_down
     name: "Head Down"
-    output: relay_head_down_pin
+    output: relay_head_down
   - platform: output
     id: legs_up
     name: "Legs Up"
-    output: relay_legs_up_pin
+    output: relay_legs_up
   - platform: output
     id: legs_down
     name: "Legs Down"
-    output: relay_legs_down_pin
+    output: relay_legs_down
 
 # Check the wifi status and turn on/off the wifi status LED
 interval:
