@@ -12,8 +12,26 @@ esp32:
   framework:
     type: arduino
 
-# Include the base device configuration
-<<: !include .device_base.yaml
+logger:
+captive_portal:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: !secret api_encryption_key
+
+# Ota (over the air updates)
+ota:
+  password: !secret ota_password
+
+# Wifi
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "${friendly_name} Fallback Hotspot"
+    password: !secret recovery_ap_password
 
 # Output Config
 output:
