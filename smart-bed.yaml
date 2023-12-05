@@ -76,6 +76,34 @@ switch:
     output: relay_legs_down
     internal: true
 
+# Configuring covers to make them manage 
+cover:
+  - platform: time_based
+    name: "Head"
+    id: head_cover
+    open_action:
+      - switch.turn_on: head_up
+    open_duration: 35s
+    close_action:
+      - switch.turn_on: head_down
+    close_duration: 20s
+    stop_action:
+      - switch.turn_off: head_up
+      - switch.turn_off: head_down
+  - platform: time_based
+    name: "Legs"
+    id: legs_cover
+    open_action:
+      - switch.turn_on: legs_up
+    open_duration: 35s
+    close_action:
+      - switch.turn_on: legs_down
+    close_duration: 20s
+    stop_action:
+      - switch.turn_off: legs_up
+      - switch.turn_off: legs_down
+
+
 # Check the wifi status and turn on/off the wifi status LED
 interval:
   - interval: 1s
