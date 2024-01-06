@@ -83,10 +83,10 @@ cover:
     id: head_cover
     open_action:
       - switch.turn_on: head_up
-    open_duration: 35s
+    open_duration: 33s
     close_action:
       - switch.turn_on: head_down
-    close_duration: 20s
+    close_duration: 25s
     stop_action:
       - switch.turn_off: head_up
       - switch.turn_off: head_down
@@ -95,10 +95,10 @@ cover:
     id: legs_cover
     open_action:
       - switch.turn_on: legs_up
-    open_duration: 35s
+    open_duration: 25s
     close_action:
       - switch.turn_on: legs_down
-    close_duration: 20s
+    close_duration: 25s
     stop_action:
       - switch.turn_off: legs_up
       - switch.turn_off: legs_down
