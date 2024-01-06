@@ -17,17 +17,12 @@ The next problem with the smart bed are timings. I found out that the raising an
 
 For the power, I used an old phone charger that I had laying around. This is an easy way to give power to the controller. You just need to check that the voltage is correct and that the power supply can provide enough current for the controller and relays.
 
-# Requirements
-- ESPHome compatible controller (ESP32, ESP8266, etc.)
-- 4ch relay board
-- Power supply (I used an old phone charger for this)
-- A cable to connect everything together
+# Hardware used
+- [ESP32 board with 4ch relay](https://devices.esphome.io/devices/AC-DC-ESP32-Relay-x4). You can find similar ones from Ebay and Aliexpress.
+  - If board doesn't have USB for flashing: USB to TTL converter
+- Power supply: Old phone charger
+- Cables to connect everything together
 - Connectors that go between your bed controller and bed
-  - This is optional but recommended if you want to keep the original controller. Otherwise, you need to cut the remote cable and use its connector.
-- USB to TTL converter
-  - This is only required if your controller does not have an USB port
-
-Personally I used prefabricated [ESP32 board with 4ch relay](https://devices.esphome.io/devices/AC-DC-ESP32-Relay-x4). You can find similar ones from Ebay and Aliexpress.
 
 # DISCLAIMER!
 I don't take any responsibility if you break something. This is just a documentation on how I made this project!
