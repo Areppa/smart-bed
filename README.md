@@ -1,5 +1,3 @@
-# CURRENT STATUS: NOT PROPERLY TESTED!
-
 # Smart Bed
 Smart Bed is a project that allows you to have better control of your motorized bed. The actual code is generated using [ESPHome](https://esphome.io/) which makes it easy to connect to automation platforms such as [Home Assistant](https://www.home-assistant.io/) or any other system that is compatible with ESPHome.
 
