@@ -7,9 +7,9 @@ This was just one of those ideas that I thought would be interesting to implemen
 Also I saw [Colinfurze's video](https://www.youtube.com/watch?v=EVzn1pl4nlo) about an automatically ejecting bed which gave me some inspiration.
 
 # How it works
-This project assumes that the bed's remote has 4 buttons. There are two buttons for raising the head and legs and two for lowering them. Relays are used to simulate pressing those buttons. Some remotes might have more buttons, such as buttons for raising and lowering the whole bed. Those features can be used by using both head and leg relays at the same time.
+This project assumes that the bed's remote has 4 buttons. There are two buttons for raising the head, legs and two for lowering them. Relays are used to simulate pressing those buttons. Some remotes might have more buttons, such as for raising and lowering the whole bed. Those features can be used by using both head and leg relays simultaneously.
 
-There are two ways of wiring this: either replacing the original remote or wiring it in parallel with the new controller. I chose the latter because I believe that smart devices should always add new features, never remove them or make them harder to use. This way, you can still use the bed with the original remote.
+There are two ways of wiring this: either replacing the original remote or wiring it in parallel with the new controller. I chose the latter because I believe that smart devices should always add new features, and never remove them or make them harder to use. This way, you can still use the bed with the original remote.
 
 For the position of the bed, I chose to use ESPHome's time_based cover component. This is not 100% accurate but it should be accurate enough.
 
